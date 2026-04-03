@@ -1,50 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chopingson</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chopingson</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header>
-      <nav>
-        <a href="#" class="nav-logo">Chopingson</a>
+  <header>
+    <nav>
+      <a href="#" class="nav-logo">Chopingson</a>
 
-        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links"
+        aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-        <div class="nav-links-container" id="nav-links">
-          <ul class="nav-links">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Quality & Hygiene</a></li>
-            <li><a href="#">News Updates</a></li>
-            <li><a href="#">Request Supply</a></li>
-          </ul>
+      <div class="nav-links-container" id="nav-links">
+        <ul class="nav-links">
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Quality & Hygiene</a></li>
+          <li><a href="#">News Updates</a></li>
+          <li><a href="#">Request Supply</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-section">
+        <div class="hero-text">
+          <h1>Fresh Fish, Beef <br>& Chicken</h1>
+          <p>Supplying quality fresh & hyginecally nutured fish, <br>meat and chicken to households and retailers</p>
+          <a href="#">Request Supply</a>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section class="hero-section">
         <div class="slider-container">
           <div class="slider-track">
-            <div class="slide active"><img src="fish.png" alt="Fish"></div>
-            <div class="slide"><img src="raw-chicken.png" alt="Chicken"></div>
-            <div class="slide"><img src="meat.png" alt="Meat"></div>
+            <div class="slide active"><img src="fish.png" alt="Fish" /></div>
+            <div class="slide"><img src="raw-chicken.png" alt="Chicken" /></div>
+            <div class="slide"><img src="meat.png" alt="Meat" /></div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </section>
+    <section class="card-section">
+      <span>Why Choose Chopingson</span>
+      <div class="card-grid">
+        <div class="card" style="background-color: #95d9ff">
+          <div class="box1"></div>
+          <h3>Freshness & Quality</h3>
+          <p>
+            We provide carefully selected fish, beef & chicken under strict
+            standards to ensure freshness & quality
+          </p>
+          <svg class="card-svg1" width="393" height="85" viewBox="0 0 393 85" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M186.271 0.960547C223.196 6.82892 241.527 48.2703 272.725 68.9059C303.372 89.1765 346.185 90.7806 367.433 120.786C389.849 152.44 399.106 195.416 388.807 232.829C378.799 269.188 337.349 284.944 314.083 314.597C289.174 346.344 286.008 400.619 247.583 412.823C209.308 424.979 175.598 382.807 137.293 370.745C99.9935 358.999 52.3833 371.663 25.7648 342.975C-0.840251 314.301 11.2408 268.411 6.31028 229.578C1.47486 191.494 -16.7404 152.921 -2.91169 117.116C11.136 80.7445 46.9904 58.6862 80.1841 38.3056C112.802 18.2789 148.486 -5.0445 186.271 0.960547Z"
+              fill="white" />
+          </svg>
+          <svg class="card-svg2" width="393" height="85" viewBox="0 0 393 85" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M186.271 0.960547C223.196 6.82892 241.527 48.2703 272.725 68.9059C303.372 89.1765 346.185 90.7806 367.433 120.786C389.849 152.44 399.106 195.416 388.807 232.829C378.799 269.188 337.349 284.944 314.083 314.597C289.174 346.344 286.008 400.619 247.583 412.823C209.308 424.979 175.598 382.807 137.293 370.745C99.9935 358.999 52.3833 371.663 25.7648 342.975C-0.840251 314.301 11.2408 268.411 6.31028 229.578C1.47486 191.494 -16.7404 152.921 -2.91169 117.116C11.136 80.7445 46.9904 58.6862 80.1841 38.3056C112.802 18.2789 148.486 -5.0445 186.271 0.960547Z"
+              fill="white" />
+          </svg>
+        </div>
+        <div class="card" style="color: #fff; background-color: #0192e6">
+          <div class="box2"></div>
+          <h3>Hygiene Handling</h3>
+          <p>
+            Our products are stored and handled using proper hygiene at all
+            times.
+          </p>
+          <svg class="card-svg3" width="311" height="68" viewBox="0 0 311 68" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M206.729 0.960547C169.804 6.82892 151.473 48.2703 120.275 68.9059C89.6277 89.1765 46.8152 90.7806 25.5672 120.786C3.15115 152.44 -6.10593 195.416 4.19278 232.829C14.201 269.188 55.6511 284.944 78.917 314.597C103.826 346.344 106.992 400.619 145.417 412.823C183.692 424.979 217.402 382.807 255.707 370.745C293.006 358.999 340.617 371.663 367.235 342.975C393.84 314.301 381.759 268.411 386.69 229.578C391.525 191.494 409.74 152.921 395.912 117.116C381.864 80.7445 346.01 58.6862 312.816 38.3056C280.198 18.2789 244.514 -5.0445 206.729 0.960547Z"
+              fill="white" />
+          </svg>
+        </div>
+        <div class="card" style="background-color: #95d9ff">
+          <div class="box3"></div>
+          <h3>Reliable Supply</h3>
+          <p>
+            We are committed to dependable service ensuring consistent
+            availability of quality beef, fish & chicken for everyone.
+          </p>
+          <svg class="card-svg4" width="311" height="68" viewBox="0 0 311 68" fill=""
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M206.729 0.960547C169.804 6.82892 151.473 48.2703 120.275 68.9059C89.6277 89.1765 46.8152 90.7806 25.5672 120.786C3.15115 152.44 -6.10593 195.416 4.19278 232.829C14.201 269.188 55.6511 284.944 78.917 314.597C103.826 346.344 106.992 400.619 145.417 412.823C183.692 424.979 217.402 382.807 255.707 370.745C293.006 358.999 340.617 371.663 367.235 342.975C393.84 314.301 381.759 268.411 386.69 229.578C391.525 191.494 409.74 152.921 395.912 117.116C381.864 80.7445 346.01 58.6862 312.816 38.3056C280.198 18.2789 244.514 -5.0445 206.729 0.960547Z"
+              fill="white" />
+          </svg>
+          <svg class="card-svg5" width="311" height="68" viewBox="0 0 311 68" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M206.729 0.960547C169.804 6.82892 151.473 48.2703 120.275 68.9059C89.6277 89.1765 46.8152 90.7806 25.5672 120.786C3.15115 152.44 -6.10593 195.416 4.19278 232.829C14.201 269.188 55.6511 284.944 78.917 314.597C103.826 346.344 106.992 400.619 145.417 412.823C183.692 424.979 217.402 382.807 255.707 370.745C293.006 358.999 340.617 371.663 367.235 342.975C393.84 314.301 381.759 268.411 386.69 229.578C391.525 191.494 409.74 152.921 395.912 117.116C381.864 80.7445 346.01 58.6862 312.816 38.3056C280.198 18.2789 244.514 -5.0445 206.729 0.960547Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="pill-section">
+      <span>Explore Our Products</span>
+      <div class="pill-grid">
+        <div class="pill1">
+          <p>Beef</p>
+          <img src="meat.png" alt="beef">
+        </div>
+        <div class="pill2">
+          <p>Fish</p>
+          <img src="fish.png" alt="fish">
+        </div>
+        <div class="pill3">
+          <p>Chicken</p>
+          <img src="raw-chicken.png" alt="raw-chicken">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="about-section">
+        <div class="about-text">
+          <span class="title">About Us</span>
+          <p>Chopingnson is a supplier and exporter of high-quality seafood 
+            products, dedicated to bringing the best of the ocean to your table. 
+            Our expertise lies in sourcing and delivering stockfish, mackerel, 
+            crayfish, and a variety of dried fish to customers worldwide.
+          </p>
+          <span>
+            <a href="#">Contact us</a>
+            <a href="#">Read more</a>
+          </span>
+        </div>
+        <!-- <img src="phone-blob.png" alt="phone blob"> -->
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
