@@ -10,6 +10,7 @@
   --bg-gray: #f2f5f8;
   --gradient-color: #32aaec;
   --btn-bg: #2f2f2f;
+  --btn-bg-2: #0c509d;
 
   --header-bg: #333;
 
@@ -19,7 +20,7 @@
   --blue-bg: #8fd8ff;
 
   --max-width: 1200px;
-  --footer-bg: #e6e6e6;
+  --footer-bg: #0e264a;
 }
 
 html {
@@ -59,7 +60,7 @@ nav {
   background: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
 }
@@ -134,7 +135,7 @@ nav {
   width: 100%;
   background-color: var(--primary-blue);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -145,10 +146,11 @@ nav {
 }
 
 .hero-text h1 {
-  font-size: 2rem;
+  font-size: 2.7rem;
+  line-height: 4rem;
 }
 
-.hero-text a {
+.black-btn {
   background-color: var(--btn-bg);
   padding: 0.7rem 1.5rem;
   border-radius: 10px;
@@ -166,6 +168,13 @@ nav {
   margin-top: 3rem;
   font-size: 2rem;
   font-weight: 500;
+}
+
+.img-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
 }
 
 .flex-container1 {
@@ -236,50 +245,182 @@ nav {
   height: 200px;
 }
 
+.categories {
+  padding: 4rem 0;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.8fr;
   gap: 2em;
-  width: min(1100px, 95%);
-  margin: 5rem 5rem;
+  width: 90%;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-container h2 {
+  padding-bottom: 2rem;
+}
+
+.spaced-text{
+  line-height: 2rem;
+}
+
+
+.grid-container span {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
 }
 
 .grid-item1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
+  justify-content: flex-start;
+  align-self: center;
+  padding-left: 2rem;
 }
 
-.grid-item1 h1 {
-  padding: 2rem 0;
+.grid-item1 a:nth-child(1) {
+  background-color: var(--btn-bg-2);
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--text-light);
+  text-decoration: none;
 }
 
-.grid-item1 a {
-  padding: 2rem;
+.grid-item1 a:nth-child(2) {
+  background-color: transparent;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--btn-bg-2);
+  text-decoration: none;
+  border: 1px solid var(--btn-bg-2);
 }
+
 
 .grid-item4 {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  align-self: center;
+}
+
+.bg-btn {
+  background-color: var(--btn-bg-2);
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.outline-button {
+  background-color: transparent;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--btn-bg-2);
+  text-decoration: none;
+  border: 1px solid var(--btn-bg-2);
+}
+
+.more-products {
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  padding: 4rem 5rem;
 }
 
-.grid-item4 h1 {
-  padding: 2rem;
+.div-text-h2{
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
-.grid-item4 a {
-  padding: 2rem;
+.div-text-span {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
 }
 
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-blue);
+  width: 100%;
+  height: auto;
+  padding-left: 5rem;
+  color: var(--text-light);
+}
+
+.div-text-span a:nth-child(2) {
+  background-color: transparent;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--btn-bg);
+  text-decoration: none;
+  border: 1px solid var(--btn-bg);
+}
+
+.request-supply-section {
+  margin: 4rem 3rem;
+}
+
+.request-supply {
+  background-color: var(--primary-blue);
+  margin: 0 auto;
+  height: 60vh;
+  padding-left: 4rem;
+  max-width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text-light);
+  position: relative;
+}
+
+.request-supply img {
+  position: absolute;
+  top: -150px;
+  right: -20px;
+
+}
+
+.request-supply-text {
+  line-height: 3rem;
+}
+
+.request-supply-text h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.request-supply-text span {
+  padding: 1rem;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+}
+
+.request-supply-text input {
+  border-radius: 10px;
+  padding: 1rem;
+}
 .footer {
   background-color: var(--footer-bg);
   padding: 3rem 5rem;
   position: relative;
+  color: var(--text-light);
 }
 
 /* .footer::before {
@@ -309,8 +450,7 @@ nav {
 .footer-divider {
   border: none;               
   height: 1px;                
-  background-color: var(--header-bg); 
-  opacity: 0.2;               
+  background-color: var(--text-light);               
   margin: 30px 0;             
   width: 100%;                
 }
@@ -335,7 +475,7 @@ nav {
 
 .footer-links a{
   text-decoration: none;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .footer-contact ul{
