@@ -8,6 +8,13 @@ hamburger.addEventListener("click", () => {
 
   hamburger.setAttribute("aria-expanded", !isExpanded);
 
+  document.body.style.overflow = isExpanded ? "" : "hidden";
+
+});
+
+const navLinks = document.querySelectorAll(".nav-links a");
+navLinks.forEach(link => {
+  link.addEventListener("click", closeMenu);
 });
 
 function closeMenu() {
@@ -15,6 +22,7 @@ function closeMenu() {
     hamburger.classList.remove("is-active");
 
     hamburger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
 }
 
 document.addEventListener("keydown", (event) => {
@@ -30,3 +38,6 @@ document.addEventListener("click", (event) => {
     closeMenu();
   }
 });
+
+
+

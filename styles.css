@@ -8,16 +8,8 @@
   --text-light: #ffffff;
   --text-gray: #666666;
   --bg-gray: #f2f5f8;
-  --gradient-color: #32aaec;
   --btn-bg: #2f2f2f;
   --btn-bg-2: #0c509d;
-
-  --header-bg: #333;
-
-  
-  --green-bg: #8b993e;
-  --pink-bg: #ffa4a4;
-  --blue-bg: #8fd8ff;
 
   --max-width: 1200px;
   --footer-bg: #0e264a;
@@ -131,7 +123,7 @@ nav {
 }
 
 .hero-section {
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
   background-color: var(--primary-blue);
   display: flex;
@@ -182,6 +174,11 @@ nav {
   gap: 1em;
   width: min(1100px, 95%);
   margin: 50px auto;
+}
+
+.flex-container1 img {
+  width: 50px;
+  height: 50px;
 }
 
 .flex-card1 {
@@ -245,20 +242,21 @@ nav {
   height: 200px;
 }
 
-.categories {
+#categories {
   padding: 4rem 0;
 }
 
-.products {
+#products {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3.5rem 0;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.8fr;
+  grid-template-columns: 1fr 0.7fr;
+  grid-template-rows: 1fr 0.7fr;
   gap: 2em;
   width: 90%;
 }
@@ -334,7 +332,7 @@ nav {
   border: 1px solid var(--btn-bg-2);
 }
 
-.more-products {
+#more-products {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,8 +341,9 @@ nav {
 }
 
 .div-text-h2{
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   padding-bottom: 2rem;
+  line-height: 3rem;
 }
 
 .div-text-span {
@@ -353,7 +352,7 @@ nav {
   padding-top: 2rem;
 }
 
-.about-us {
+#about-us {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -373,14 +372,14 @@ nav {
   border: 1px solid var(--btn-bg);
 }
 
-.request-supply-section {
+#request-supply-section {
   margin: 4rem 3rem;
 }
 
 .request-supply {
   background-color: var(--primary-blue);
   margin: 0 auto;
-  height: 60vh;
+  min-height: 60vh;
   padding-left: 4rem;
   max-width: 95%;
   display: flex;
@@ -399,10 +398,13 @@ nav {
 
 .request-supply-text {
   line-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .request-supply-text h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 500;
 }
 
@@ -413,9 +415,50 @@ nav {
 }
 
 .request-supply-text input {
-  border-radius: 10px;
-  padding: 1rem;
+  flex-grow: 1;
+  background-color: white;
+  border: none;
+  color: #374151;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  outline: none;
 }
+
+.request-supply-text input:focus {
+  color: black; 
+}
+
+.request-supply-text input::placeholder {
+  color: #9ca3af; 
+}
+
+.input-container {
+  display: flex;
+  align-items: stretch;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem 0 0 1.5rem;
+  max-width: 80%;
+}
+
+.input-container button {
+  background-color: #10559e;
+  color: white;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.input-container button:hover {
+  background-color: rgba(16, 85, 158, 0.9);
+}
+
+
 .footer {
   background-color: var(--footer-bg);
   padding: 3rem 5rem;
@@ -493,6 +536,88 @@ nav {
   font-size: 1.5rem;
   gap: 1.5rem;
 }
+
+.social-icons a {
+  color: var(--text-light);
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .flex-container1,
+  .flex-container2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-header {
+    margin: 0;
+  }
+
+  #why-choose {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #categories {
+    text-align: center;
+  }
+
+  #more-products,
+  #about-us {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .request-supply img {
+    display: none;
+
+}
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .nav-links-container {
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    overflow: visible;
+  }
+}
+
+
 
 
 
