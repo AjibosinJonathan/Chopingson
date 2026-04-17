@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chopingson — Premium fresh fish, chicken, beef & foodstuffs.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="nav-logo"><img src="Chopingson-logo.png" alt="brand logo"></a>
+
+            <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-links-container" id="nav-links">
+                <ul class="nav-links">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">News Updates</a></li>
+                <li><a href="#request-supply-section">Request Supply</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero-section">
+            <div class="contact-hero">
+                <div class="contact-hero-text">
+                    <h1>Our Contact</h1>
+                </div>
+                <img class="responsive-img" src="images/call-image.png" alt="call icon">
+            </div>
+        </section>
+        <section>
+            <div class="contact-info">
+                <div class="contact-info-text">
+                    <h2>Keep In Touch With Us</h2>
+                    <hr>
+                    <p>We are excited to hear from You! Drop your orders with us via our email.</p>
+                    <div class="contact-info-text-flex">
+                        <div class="flex-item">
+                            <img src="images/phone-icon.svg" alt="phone icon">
+                            <p>+47 984 094 49</p>
+                        </div>
+                        <div class="flex-item">
+                            <img src="images/email-icon.svg" alt="email icon">
+                            <p>chopingson@gmail.com</p>
+                        </div>
+                        <div class="flex-item">
+                            <img src="images/location-icon.svg" alt="location icon">
+                            <p>147, Byhagan 2345, Loten Norway</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info-form">
+                    <h3>Get In Touch</h3>
+                    <hr>
+                    <p>Fill in the form to contact us</p>
+                        <!-- Form -->
+                        <form class="contact-form">
+
+                            <!-- Name -->
+                            <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Name" required />
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" required />
+                            </div>
+
+                            <!-- Email (spans 2 columns) -->
+                            <div class="form-group full-width">
+                            <input type="email" id="email" name="email" placeholder="Email" required />
+                            </div>
+
+                            <!-- Message (spans 2 columns) -->
+                            <div class="form-group full-width">
+                            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+
+                            <!-- Button (spans 2 columns) -->
+                            <div class="full-width">
+                            <button type="submit" class="bg-btn">Send Message</button>
+                            </div>
+
+                        </form>
+                </div>
+            </div>
+        </section>
+        <section id="News-Updates">
+            <h2>News and Updates</h2>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-main-grid">
+            <div class="footer-brand">
+                <img src="Chopingson-logo.png" alt="brand logo" loading="lazy">
+                <p>High Quality foods at your reach!</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><strong>Links</strong></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html#News-Updates">News & Updates</a></li>
+                </ul>
+            </div>  
+            <div class="footer-contact">
+                <ul>
+                    <li><strong>Contact</strong></li>
+                    <li>Phone: +47 984 094 49</li>
+                    <li>Email: chopingson@gmail.com</li>
+                    <li>Address:147, Byhagan 2345, Loten Norway </li>
+                </ul>
+            </div>      
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom-flex">
+            <p class="copyright">© 2026 Chopingson. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>  
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
