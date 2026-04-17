@@ -221,10 +221,13 @@ nav {
 
 .flex-container2 {
   display: flex;
+  flex-wrap: wrap;
   gap: 6em;
   width: min(1100px, 95%);
   margin: 50px auto;
 }
+
+
 
 .flex-container2 img {
   width: 200px;
@@ -345,6 +348,7 @@ nav {
   font-size: clamp(2rem, 5vw, 3rem);
   padding-bottom: 2rem;
   line-height: 3rem;
+  max-width: 500px;
 }
 
 .div-text-span {
@@ -408,7 +412,7 @@ nav {
 }
 
 .request-supply-text h2 {
-  font-size: clamp(1rem, 2.5vw + 0.5rem, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.5rem);
   font-weight: 500;
 }
 
@@ -418,44 +422,47 @@ nav {
   color: var(--text-light);
 }
 
-.request-supply-text input {
-  flex-grow: 1;
-  background-color: white;
+.input-container {
+  display: flex;
+  border-radius: 1.5rem 0 0 1.5rem;
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+}
+
+.input-container input {
+  flex-grow: 1;     
+  min-width: 0;
   border: none;
-  color: #374151;
-  font-size: 1.125rem;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: clamp(0.8rem, 1.5vw + 0.5rem, 1.125rem);
+}
+
+.input-container input:focus {
   outline: none;
+  color: black;
 }
 
-.request-supply-text input:focus {
-  color: black; 
-}
-
-.request-supply-text input::placeholder {
+.input-container input::placeholder {
   color: #9ca3af; 
 }
 
-.input-container {
-  display: flex;
-  align-items: stretch;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  border-radius: 1.5rem 0 0 1.5rem;
-  max-width: 80%;
+.sr-only {
+  position: absolute;
+  visibility: hidden;
 }
 
 .input-container button {
+  flex-shrink: 0;
   background-color: #10559e;
   color: white;
   font-weight: 500;
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(0.8rem, 1.5vw + 0.5rem, 1.125rem);
   border: none;
   cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .input-container button:hover {
@@ -766,11 +773,32 @@ nav {
   }
 
   .flex-container2 {
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-card {
+    text-align: center;
   }
 
   .grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .grid-item1 {
+    text-align: center;
+  }
+
+    .grid-item4 {
+    text-align: center;
+  }
+
+  .more-products-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .flex-header {
@@ -792,45 +820,69 @@ nav {
     padding: 2rem;
   }
 
+  .request-supply {
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
   .request-supply img {
     display: none;
+  }
 
-}
+  .request-supply-text {
+    justify-content: center;
+    align-items: center;
+  }
 
-.input-container {
-  max-width: 50%;
-}
 
-.product-hero-text {
-  width: 50%;
-}
+  .input-container {
+    flex-direction: column;        
+    border-radius: 1rem;           
+    max-width: 100%;
+  }
 
-.product-hero-text h1 {
-  font-size: 5vw;
-}
+  .input-container button {
+    border-radius: 1rem 1rem 0 0;  
+    width: 100%;                   
+    padding: 0.75rem 1rem;
+  }
 
-.product-category-header {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .input-container input {
+    border-radius: 0 0 1rem 1rem; 
+    width: 100%;                   
+  }
 
-.contact-info {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
 
-.contact-form {
-  grid-template-columns: 1fr;
-}
+  .product-hero-text {
+    width: 50%;
+  }
 
-.full-width {
-  grid-column: span 1; 
-}
+  .product-hero-text h1 {
+    font-size: 5vw;
+  }
 
+  .product-category-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1; 
+  }
 
   .footer-main-grid {
     grid-template-columns: 1fr;
@@ -839,6 +891,12 @@ nav {
   .footer-bottom-flex {
     flex-direction: column;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .request-supply img {
+    display: none;
   }
 }
 
