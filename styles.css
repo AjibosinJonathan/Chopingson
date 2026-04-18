@@ -136,15 +136,17 @@ nav {
 .hero-image {
   max-width: 100%;
   height: auto;
+  flex: 1;
 }
 
 .hero-text {
-  padding-left: 5rem;
+  padding-left: 8vw;
   line-height: 3rem;
   color: var(--text-light);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 2;
 }
 
 .hero-text h1 {
@@ -780,6 +782,7 @@ nav {
     padding: 0;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
   }
 
   .spaced-text{
