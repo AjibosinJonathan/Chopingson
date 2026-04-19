@@ -167,11 +167,12 @@ nav {
   align-self: flex-start;
   line-height: 1;
   padding: 0.7rem 1.5rem;
+  white-space: nowrap;
 }
 
 .flex-header {
   margin-top: 3rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
   font-weight: 500;
   line-height: 3rem;
 }
@@ -330,6 +331,17 @@ nav {
   white-space: nowrap;
 }
 
+.products-bg-btn {
+  background-color: var(--contact-text);
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--text-light);
+  text-decoration: none;
+  border: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .outline-button {
   background-color: transparent;
   padding: 0.7rem 1.5rem;
@@ -383,9 +395,31 @@ nav {
 }
 
 .about-us-text p{
-  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
-  line-height: 3rem;
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1.2rem);
+  line-height: 2.5rem;
   
+}
+
+.about-us-text a:nth-child(1) {
+  background-color: var(--btn-bg);
+  border-radius: 10px;
+  color: var(--text-light);
+  text-decoration: none;
+  align-self: flex-start;
+  line-height: 1;
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+}
+
+.about-us-text a:nth-child(2) {
+  background-color: transparent;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: var(--btn-bg-2);
+  text-decoration: none;
+  border: 1px solid var(--btn-bg-2);
+  line-height: 1;
+  white-space: nowrap; 
 }
 
 #request-supply-section {
@@ -506,16 +540,16 @@ nav {
   padding: 2rem;
 }
 
-#product-category a{
-  margin: 0 5rem;
-}
-
 .product-category-header {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   align-items: center;
   padding: 2rem 5rem;
+}
+
+.product-category-header p {
+  text-align: left;
 }
 
 .icon-size {
@@ -850,7 +884,20 @@ nav {
   }
 
   .flex-header {
+    line-height: 2rem;
+  }
+
+  .flex-header-margin {
     margin: 0;
+  }
+
+  .product-category-text p{
+    padding-top: 1rem;
+  }
+
+  .products-grid {
+    padding: 0 1rem;
+    place-items: center;
   }
 
   #why-choose {
@@ -914,7 +961,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 1rem 1.5rem;
   }
 
   .contact-info {
@@ -958,6 +1005,32 @@ nav {
   .nav-links {
     flex-direction: row;
     overflow: visible;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bg-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .outline-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .about-us-text a:nth-child(1) {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .about-us-text a:nth-child(2) {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .contact-hero {
+    overflow: hidden;
   }
 }
 
