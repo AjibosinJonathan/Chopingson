@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-
 :root {
   --primary-blue: #0192e6;
   --secondary-blue: #0787ea;
@@ -29,6 +27,14 @@ html {
 
 body {
   font-family: "Sora", sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
 }
 
 header {
@@ -125,9 +131,13 @@ nav {
 }
 
 .hero-section {
-  min-height: 80vh;
   width: 100%;
-  background-color: var(--primary-blue);
+  aspect-ratio: 1036 / 580;
+  background-image: url("images/hero-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,6 +259,10 @@ nav {
 
 #categories {
   padding: 4rem 0;
+  background-image: url("images/abstract-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #products {
@@ -279,13 +293,6 @@ nav {
   line-height: 3rem;
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
   font-weight: 300;
-}
-
-
-.grid-container span {
-  display: flex;
-  gap: 2rem;
-  padding-top: 2rem;
 }
 
 .grid-item1 {
@@ -359,7 +366,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 #more-products {
@@ -492,10 +499,19 @@ nav {
   color: #9ca3af; 
 }
 
+
 .sr-only {
   position: absolute;
-  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
+
 
 .input-container button {
   flex-shrink: 0;
@@ -523,7 +539,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -538,6 +554,10 @@ nav {
 
 #product-category {
   padding: 2rem;
+  background-image: url("images/abstract-background.svg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .product-category-header {
@@ -562,6 +582,10 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem 5rem;
+}
+
+.products-grid a {
+  
 }
 
 .green-text {
@@ -698,14 +722,14 @@ nav {
   background-color: var(--bg-gray);
   border-radius: 1rem;
   width: auto;
-  height: 50vh;
+  min-height: 50vh;
 }
 
-#News-Updates {
+#news-updates {
   margin-bottom: 30vh;
 }
 
-#News-Updates h2{
+#news-updates h2{
   margin-left: 3rem;
   color: var(--contact-text);
 }
@@ -803,8 +827,6 @@ nav {
     flex-direction: column;
     height: auto;
     padding: 0;
-    justify-content: none;
-    align-items: none;
   }
 
   .hero-image {
@@ -813,7 +835,6 @@ nav {
   }
 
   .hero-text {
-    padding: 0;
     justify-content: center;
     align-items: center;
     padding: 2rem;
@@ -1032,6 +1053,11 @@ nav {
   .contact-hero {
     overflow: hidden;
   }
+
+  .hero-section {
+  aspect-ratio: 400 / 224.06;
+  background-image: url("images/mobile-hero-background.svg");
+}
 }
 
 
