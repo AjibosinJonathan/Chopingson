@@ -39,5 +39,11 @@ document.addEventListener("click", (event) => {
   }
 });
 
+function handleRedirect() {
+  const email = document.getElementById('supply-email').value;
+  const targetUrl = `contact.html?email=${encodeURIComponent(email)}#contact-form`;
+  window.location.href = targetUrl;
+}
+
 
 

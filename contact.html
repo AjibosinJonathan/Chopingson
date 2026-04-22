@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap">    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
@@ -48,7 +48,7 @@
                 <img class="responsive-img" src="images/call-image.png" width="500" height="454" alt="call icon">
             </div>
         </section>
-        <section>
+        <section id="contact-form-section">
             <div class="contact-info">
                 <div class="contact-info-text">
                     <h2>Keep In Touch With Us</h2>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="flex-item">
                             <img src="images/email-icon.svg" alt="email icon">
-                            <p>chopingson@gmail.com</p>
+                            <p>contact@chopingson.com</p>
                         </div>
                         <div class="flex-item">
                             <img src="images/location-icon.svg" alt="location icon">
@@ -74,24 +74,24 @@
                     <hr>
                     <p>Fill in the form to contact us</p>
                         <!-- Form -->
-                        <form class="contact-form">
+                        <form id="contact-form">
 
                             <!-- Name -->
                             <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name" required />
+                            <input type="text" id="name" name="user_name" placeholder="Name" required />
                             </div>
 
                             <!-- Phone -->
                             <div class="form-group">
                             <label for="phone" class="sr-only">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone" required />
+                            <input type="tel" id="phone" name="user_phone" placeholder="Phone" required />
                             </div>
 
                             <!-- Email (spans 2 columns) -->
                             <div class="form-group full-width">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required />
+                            <input type="email" id="email" name="user_email" placeholder="Email" required />
                             </div>
 
                             <!-- Message (spans 2 columns) -->
@@ -102,7 +102,7 @@
 
                             <!-- Button (spans 2 columns) -->
                             <div class="full-width">
-                            <button type="submit" class="bg-btn">Send Message</button>
+                            <button type="submit" name="submit" class="bg-btn">Send Message</button>
                             </div>
 
                         </form>
@@ -120,11 +120,11 @@
                 <div class="request-supply-text">
                     <h2>Ready to Get Our Fresh Products?</h2>
                     <p>Get fresh products supplied to you as fast as possible.</p>
-                    <form id="contact-us" action="#" method="post">
+                    <form action="contact.html" method="GET" id="contact-us">
                         <div class="input-container">
                             <label for="supply-email" class="sr-only">Email</label>
                             <input id="supply-email" name="email" type="email" placeholder="Enter your email" required>
-                            <button type="submit">Request Supply</button>
+                            <button onclick="handleRedirect()" type="submit">Request Supply</button>
                         </div>
                     </form>
                 </div>
@@ -175,17 +175,38 @@
     </script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("swAB7cZd5HBmHJ5gE");
+            emailjs.init({
+                publicKey: "swAB7cZd5HBmHJ5gE",
+            });
         })();
     </script>
     <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Pull email from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const emailValue = urlParams.get('email');
+
+            // 2. Fill the field if the email exists
+            if (emailValue) {
+                const emailField = document.getElementById('email');
+                if (emailField) {
+                    emailField.value = emailValue;
+
+                    const cleanUrl = window.location.pathname; 
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }
+        });
+
         window.onload = function () {
-            document.getElementById('contact-us').addEventListener('submit', function (event) {
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function (event) {
                     event.preventDefault();
-                emailjs.sendForm('service_58pc516', 'template_8gda74w', this).then(
+                emailjs.sendForm('service_da933a9', 'template_8gda74w', this).then(
                 (response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     window.alert('Message sent successfully');
+                    contactForm.reset();
                 },
                 (error) => {
                     console.log('FAILED...', error);

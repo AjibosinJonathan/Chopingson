@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -151,11 +151,11 @@
         <div class="request-supply-text">
           <h2>Ready to Get Our Fresh Products?</h2>
           <p>Get fresh products supplied to you as fast as possible.</p>
-            <form action="#" method="post">
+            <form action="contact.html" method="GET">
               <div class="input-container">
                 <label for="supply-email" class="sr-only">Email</label>
                 <input id="supply-email" name="email" type="email" placeholder="Enter your email" required>
-                <button type="submit">Request Supply</button>
+                <button onclick="handleRedirect()" type="submit">Request Supply</button>
               </div>
             </form>
         </div>
