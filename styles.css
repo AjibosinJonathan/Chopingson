@@ -993,10 +993,6 @@ nav {
     gap: 3rem;
   }
 
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
-
   .full-width {
     grid-column: span 1; 
   }
@@ -1055,10 +1051,14 @@ nav {
     overflow: hidden;
   }
 
+  #contact-form {
+    grid-template-columns: 1fr;
+  }
+
   .hero-section {
   aspect-ratio: 400 / 224.06;
   background-image: url("images/mobile-hero-background.svg");
-}
+  }
 }
 
 
